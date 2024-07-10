@@ -15,6 +15,7 @@ public interface HotelRepository extends JpaRepository<Hotel, String> {
 
     @Query(value = "CALL search_hotel(:name, :adress)", nativeQuery = true)
     List<Hotel> searchHotel(@Param("name") String name, @Param("adress") String adress);
+    
 }
 
 
